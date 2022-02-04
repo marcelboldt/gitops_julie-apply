@@ -6,9 +6,9 @@ ls -l
 envsubst < $2 > /client.config
 envsubst < $3 > /topology.yml
 
-kafka-topology-builder.sh --version
+julie-ops-cli.sh --version
 echo ""
-kafka-topology-builder.sh \
+julie-ops-cli.sh \
     --brokers $1 \
     --clientConfig /client.config \
     --topology /topology.yml \
