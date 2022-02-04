@@ -1,0 +1,25 @@
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  brokers:
+    description: 'The kafka bootstrap.servers uri'
+    required: true
+    default: 'broker:9092'
+  clientConfig:
+    description: 'The kafka AdminClient config file'
+    required: true
+    default: 'client.config'
+  topology:
+    description: 'The topology file in the repository to be applied'
+    required: true
+    default: 'topology.yml'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.brokers }}
+    - ${{ inputs.clientConfig }}
+    - ${{ inputs.topology }}
+
+
+# todo: set exit code https://docs.github.com/en/actions/creating-actions/setting-exit-codes-for-actions
