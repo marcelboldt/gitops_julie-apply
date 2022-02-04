@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Julieops apply'
+description: 'Apply a topology to a kafka cluster'
 inputs:
   brokers:
     description: 'The kafka bootstrap.servers uri'
